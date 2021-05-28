@@ -3,12 +3,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 sender_email_id = 'terblancheronald@gmail.com'
-receiver_email_id = 'africa.adam1@gmail.com, zoeerispe7@gmail.com, thapelo@lifechoices.co.za'
+receiver_email_id = ["thapelo@lifechoices.co.za", "africa.adam1@gmail.com", "zoeerispe7@gmail.com"]
 password = input("Enter your password")
 subject = "Greetings"
 msg = MIMEMultipart()
 msg['From'] = sender_email_id
-msg['To'] = receiver_email_id
+msg['To'] = ", ".join(receiver_email_id)
 msg['Subject'] = subject
 body = "hi guys how are you. i am doing fine\n"
 body = body + "Have a good day"
